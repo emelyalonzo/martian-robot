@@ -9,6 +9,5 @@
   "author": "Emely Alonzo",
   "license": "ISC",
   "dependencies": {
-    "prompt": "^1.2.0"
   }
 }
