@@ -1,3 +1,4 @@
+const move = require("./envir.js");
 const readline = require('readline');
 const rl = readline.createInterface({
     input: process.stdin,
@@ -10,15 +11,17 @@ let lostRobots = [] // This array will look like [[1,2],[3,4]]
 let scent = [];
 let robots = [];
 const upperRight = [];
-const move = require("./envir.js").default;
 
-function Robot(x, y, orientation, instructions, lost) {
+
+class Robot {
+  constructor(x, y, orientation, instructions, lost) {
     this.x = x;
     this.y = y;
     this.orientation = orientation;
     this.instructions = instructions;
     this.lost = lost;
   }
+}
 
 function input(prompt) {
     return new Promise((callback, error) => {
@@ -44,7 +47,7 @@ function addRobot (answer){
     //The user says one letter as an orientation, so we convert it to a number
     let cardinalNum = cardinalPoints.indexOf(answer[2]);
     //To store the robots information we use instances of Robot Object
-    var newRobot = new Robot(answer[0], answer[1], cardinalNum, answer[3], false);
+    var newRobot = new Robot(parseInt(answer[0], 10), parseInt(answer[1], 10), cardinalNum, answer[3], false);
     console.log(newRobot);
     robots.push(newRobot);
 }
@@ -59,7 +62,8 @@ const main = async () => {
     }
     //We move the robots and print the resulting position for each
     for (element in robots) {
-        console.log(move(robots[element].x, robots[element].y, robots[element].orientation, robots[element].lost, upperRight[0], upperRight[1], robots[element].instructions, lostRobots, scent));
+        let result= move(robots[element], upperRight[0], upperRight[1], lostRobots, scent)
+        console.log(result);
     }
     rl.close();
 };
