@@ -39,3 +39,5 @@ All instruction strings will be less than 100 characters in length.</p><br>
 <p>For each robot position/instruction in the input, the output should indicate the final grid
 position and orientation of the robot. If a robot falls off the edge of the grid the word
 "LOST" should be printed after the position and orientation.</p><br>
+
+<p> Since the documentation says when a robot falls off the gris is lost forever, my output is different from the documentation, because I consider that when a robot is LOST, this is a forever statement, and cannot come back to the grid</p><br>
