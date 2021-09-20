@@ -47,8 +47,8 @@ Sample output <br>
 
 ![Diseño sin título](https://user-images.githubusercontent.com/68464035/133938618-f7d528ed-eabd-4166-a833-cde98d493944.png)
 
-In this picture you can the path of the second robot of the sample, the green is my solution, and the red is the one followed by the documentation.
-The input sample lose a robot, and since it get lost, can't came back to the grid, that is why my solution is different from the sample
+In this picture you can see the path of the second robot of the input sample, the green is my solution, and the red is the one followed by the documentation.
+The input sample loses a robot, and since it get lost, it can't came back to the grid, that is why my solution is different from the sample
 
 Despite this, the program works perfectly and takes into account the scent of robots
 
