@@ -2,8 +2,8 @@
  
 ## 📝 Table of Contents
 - [About](#about)
-- [Getting Started](#getting_started)
 - [Requirements](#requirements)
+- [Getting Started](#getting_started)
 - [Built Using](#built_using)
 
 ## 🧐 About <a name = "about"></a>
