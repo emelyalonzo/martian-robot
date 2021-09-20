@@ -51,7 +51,6 @@ function addRobot (answer){
     //The user says a letter as the orientation (N,E,S,W), so we convert it to a number with cardinalPoints
     let cardinalNum = cardinalPoints.indexOf(answer[2]);
     let newRobot = new Robot(parseInt(answer[0], 10), parseInt(answer[1], 10), cardinalNum, answer[3], false);
-    console.log(newRobot);
     robots.push(newRobot);
 };
 
@@ -69,7 +68,6 @@ const main = async () => {
     for (element in robots) {
         result = move(robots[element], upperRight[0], upperRight[1], lostRobots, scent);
         console.log(result);
-        console.log(scent);
     }
     rl.close();
 };
